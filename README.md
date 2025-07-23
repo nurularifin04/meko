@@ -23,7 +23,7 @@ This project utilizes the following third-party libraries:
     * Licensed under the Apache-2.0 license.
     * Full License Text: https://github.com/zxing-js/library/blob/master/LICENSE
 
-* **qrcode-generator**
+* **pako**
     * Copyright (c) 2014 - 2017 by Vitaly Puzrin and Andrei Tuputcyn
     * Licensed under the MIT license.
     * Full License Text: https://github.com/nodeca/pako/blob/master/LICENSE
