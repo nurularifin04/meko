@@ -19,9 +19,10 @@ https://mekoramaforum.com/threads/qr-code-can-it-be-reverse-engineered.257/#post
 
 This project utilizes the following third-party libraries:
 
-* **zxing-js/library**
-    * Licensed under the Apache-2.0 license.
-    * Full License Text: https://github.com/zxing-js/library/blob/master/LICENSE
+* **zxing-js/browser**
+    * Copyright (c) 2018 ZXing for JS
+    * License under the MIT license.
+    * Full License Text: https://github.com/zxing-js/browser/blob/master/LICENSE
 
 * **pako**
     * Copyright (c) 2014 - 2017 by Vitaly Puzrin and Andrei Tuputcyn
