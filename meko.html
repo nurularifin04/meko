@@ -1,0 +1,100 @@
+<!-- Mekorama Tools 1.1 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mekorama Tools</title>
+	<link rel="stylesheet" href="meko.css">
+	<script src="lib/zxing/index.js"></script>
+	<script src="lib/pako/pako.js"></script>
+	<script src="lib/qrcode/qrcode.js"></script>
+	<script src="definitions.js"></script>
+</head>
+<body>
+	<div class="image-container" id="imageContainer">
+		<h1>Quick Replace Mekorama Blocks</h1>
+		<input type="file" accept="image/*" class="hidden" id="imageInput">
+		<div class="image-display" id="imageDisplay">
+			<img id="uploadedImage" alt="Uploaded Image">
+		</div>
+		<p id="message">Select a Mekorama QR Code image to begin.</p>
+		<div class="button-group">
+			<button onclick="imageInput.click()" class="action-button limebg">Upload QR Image</button>
+			<button class="action-button sixbg" id="generateButton">Generate New QR Code</button>
+		</div>
+	</div>
+	
+	<div class="info-view six hidden" id="infoView">
+		<div class="title-author">
+			<table>
+				<tr>
+					<td><strong>Title</strong></td>
+					<td><strong>: <span class="lime" id="displayTitle">New Level</span></strong></td>
+				</tr>
+				<tr>
+					<td><strong>Author</strong></td>
+					<td><strong>: <span class="lime" id="displayAuthor">Your Name</span></strong></td>
+				</tr>
+			</table>
+		</div>
+		<button class="action-button limebg" id="editTitleButton">Edit Title</button>
+	</div>
+	
+	<div class="edit-title six hidden" id="editTitle">
+		<input type="text" maxlength="16" class="text-input" id="editTitleInput" placeholder="New Title (max 16 chars)">
+		<div class="row-button">
+			<button class="action-button sixbg" id="cancelTitleButton">Cancel</button>
+			<button class="action-button limebg" id="saveTitleButton">Save</button>
+		</div>
+	</div>
+	
+	<div class="blocks-view hidden" id="blockSummaryContainer">
+		<h2>Block Summary</h2>
+		<p class="section-description">Choose a block type to start modifying it.</p>
+		<div class="card-summary" id="blockCards">
+		</div>
+	</div>
+	
+	<div class="blocks-view hidden" id="propertiesContainer">
+		<h2>Select Positions</h2>
+		<p class="section-description">Select positions (and their orientation / font texture) you wish to change.</p>
+		<p class="lime"><strong>Column(x) | Floor(y) | Layer(z)</strong></p>
+		<div class="select-all">
+			<input type="checkbox" id="selectAll">
+			<label for="selectAll">Select All</label>
+		</div>
+		<div class="property-summary" id="propertyCards">
+		</div>
+		<div class="row-button" id="propertyButton">
+			<button class="action-button sixbg" id="backPropertyButton">Back</button>
+			<button class="action-button limebg" id="changePropertyButton">Change</button>
+		</div>
+	</div>
+
+	<div class="blocks-view hidden" id="newBlockSelection">
+		<h2>Change Block Type</h2>
+		<p class="section-description" id="selectDescription">You are about to change block</p>
+		<div class="form-group">
+			<label for="newBlockType">Select New Block Type:</label>
+			<select class="select-input" id="newBlockType"></select>
+		</div>
+		<div class="form-group">
+			<label for="newOrientation">Select New Orientation:</label>
+			<select class="select-input" id="newOrientation"></select>
+		</div>
+		<div class="form-group">
+			<label for="newTexture">Select New Font Texture:</label>
+			<select class="select-input" id="newTexture"></select>
+		</div>
+		<p class="section-description dropdown">(-- Select --) keep an original attributes. </p>
+		<div class="row-button" id="newButton">
+			<button class="action-button sixbg" id="cancelNewButton">Cancel</button>
+			<button class="action-button limebg" id="saveNewButton">Save</button>
+		</div>
+	</div>
+
+	<script src="meko.js"></script>
+</body>
+</html>
