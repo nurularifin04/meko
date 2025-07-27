@@ -80,5 +80,5 @@ export const orientations = [
 	"Right-Forward", "Back-Right", "Left-Back", "Forward-Left"
 ];
 
-export const fontTexture = Array.from({ length: 256 }, (_, i) => i);
+export const fontTexture = Array.from({ length: 256 }, (_, q) => q);
 
