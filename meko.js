@@ -1,5 +1,5 @@
 import { blockDefinitions, orientations, fontTexture } from './definitions.js';
-alert (blockDefinitions);
+
 document.addEventListener('DOMContentLoaded', () => {
 
 	// --- Image Container ---
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 	
 	function lenFixed(array) {
-		for (i = 0; i < array.length; i++) {
+		for (let i = 0; i < array.length; i++) {
 			const bd = blockDefinitions[array[i]];
 			
 			if (bd.isOriented && bd.isTextured) {
