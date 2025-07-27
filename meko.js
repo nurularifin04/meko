@@ -1,5 +1,5 @@
 import { blockDefinitions, orientations, fontTexture } from './definitions.js';
-window.location.href = '/maintenance.html';
+window.location.href = '/meko/maintenance.html';
 document.addEventListener('DOMContentLoaded', () => {
 
 	// --- Image Container ---
