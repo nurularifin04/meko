@@ -1,5 +1,5 @@
 import { blockDefinitions, orientations, fontTexture } from './definitions.js';
-alert ("try import");
+alert (blockDefinitions);
 document.addEventListener('DOMContentLoaded', () => {
 
 	// --- Image Container ---
