@@ -1,4 +1,4 @@
-
+import { blockDefinitions } from './definitions.js';
 document.addEventListener('DOMContentLoaded', () => {
 
 	// --- Image Container ---
