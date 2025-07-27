@@ -1,6 +1,6 @@
 // --- Definitions of block type, orientation and font texture ---
 
-const blockDefinitions = [
+export const blockDefinitions = [
     { "name": "[00] Blank", "isOriented": false, "isTextured": false },
     { "name": "[01] Stone", "isOriented": false, "isTextured": false },
     { "name": "[02] Brick", "isOriented": false, "isTextured": false },
