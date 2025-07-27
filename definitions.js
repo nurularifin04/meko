@@ -71,7 +71,7 @@ export const blockDefinitions = [
     { "name": "[67] Fake Motor (Zapper)", "isOriented": true, "isTextured": true }
 ];
 
-const orientations = [
+export const orientations = [
 	"Up-Forward", "Up-Right", "Up-Back", "Up-Left", 
 	"Forward-Down", "Right-Down", "Back-Down", "Left-Down", 
 	"Down-Back", "Down-Left", "Down-Forward", "Down-Right", 
@@ -80,5 +80,5 @@ const orientations = [
 	"Right-Forward", "Back-Right", "Left-Back", "Forward-Left"
 ];
 
-const fontTexture = Array.from({ length: 256 }, (_, i) => i);
+export const fontTexture = Array.from({ length: 256 }, (_, i) => i);
 
