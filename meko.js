@@ -448,6 +448,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	// --- Decode QR Code Function ---
 	async function deqrcode(image) {
 		if(image.src) {
+			/*
 			const w = image.naturalWidth;
 		  const h = image.naturalHeight;
 		  
@@ -457,9 +458,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		  cvs.height = h;
 		  const ctx = cvs.getContext('2d');
 		  ctx.drawImage(image, 0, 0, w, h);
+    */
 			const codeReader = new ZXingBrowser.BrowserQRCodeReader();
 			try {
-				const result = await codeReader.decode(cvs);
+				const result = await codeReader.decodeFromImageElement(image);
 				const metadata = result.resultMetadata;
 				byteSegments = metadata.get(2)[0];
 				const canvas = qrMake(byteSegments);
